@@ -1,0 +1,14 @@
+<header [class.sticky]='makeSticky'>
+    <nav class="flexbox-container">
+        <div class="flexbox-item-logo">
+            <img src="assets/img/logo.png" alt="openlogo" class="open-logo">
+        </div>
+        <ul class="nav-items flexbox-items-menu">
+            <li *ngFor="let menu of menuItems"><a href="#">{{menu}}</a></li>
+        </ul>
+        <div class="flexbox-items-buttons">
+            <app-button btnText="Login" btnStyle="outlined"></app-button>
+            <app-button btnText="Get Started" btnStyle="filled"></app-button>
+        </div>
+    </nav>
+</header>

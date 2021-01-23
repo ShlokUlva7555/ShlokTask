@@ -1,0 +1,12 @@
+<label for="ranger">{{label}}</label>
+<div class="range-slider">
+    <h1>&#8377; {{value}}</h1>
+    <div class="slider">
+        <input class="range-slider__range" type="range" name="mincome" [(ngModel)]="value" (ngModelChange)="color()" #ranger [min]="min" [max]="max" id="ranger">
+
+        <div class="flex-container" *ngIf="showrange">
+            <p>&#8377; {{min}}</p>
+            <p>&#8377; {{max}}</p>
+        </div>
+    </div>
+</div>

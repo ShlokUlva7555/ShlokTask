@@ -1,0 +1,50 @@
+<div class="flex-container">
+    <div class="flex-item-calc box">
+        <h3>
+            Eligibility Calculator
+        </h3>
+        <form class="main" [formGroup]="calculatorForm">
+            <div class="form-field">
+                <app-ranger #monthlyIncome [min]="100000" [max]="300000" [label]="'Monthly Income'" [showrange]="true"></app-ranger>
+                <app-ranger #monthlyExpense [min]="10000" [max]="100000" [label]="'Monthly Expense'" ></app-ranger>
+            </div>
+            <div class="form-field">
+                <label for="emi">Repayment Teure</label>
+                <div class="input-container">
+                    <select name="tenure" id="tenure" formControlName="repaymentTeure">
+            <option value="3">3 Months</option>
+            <option value="6" selected>6 Months</option>
+            <option value="9">9 Months</option>
+            <option value="12">12 Months</option>
+          </select>
+                </div>
+            </div>
+            <div class="form-field singleline">
+                <label for="emi">Do you have any existing loans?</label>
+                <span>
+          <label class="switch">
+            <input type="checkbox" formControlName="isExistingLoans" checked>
+            <span class="slider round shrink"></span>
+                </label>
+                </span>
+            </div>
+            <div class="form-field">
+                <label for="emi">EMI of existing loan (optional) </label>
+                <div class="input-container">
+                    <input type="text" name="emi" id="emi" placeholder="&#8377; 15000" formControlName="existingLoanEMI" />
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="flex-item-result box">
+        <h3>Loan Amount</h3>
+        <p>&#8377; {{loanAmount}}</p>
+        <h3>Your EMI will be</h3>
+        <p>&#8377; {{emiAmount}}</p>
+
+        <div style="margin-top: 30px;z-index: 999;">
+            <app-button btnText="Get Money" btnStyle="white" (click)="calculation()"></app-button>
+        </div>
+    </div>
+    <img src="assets/img/accounting_dots.svg" alt="dots" class="dots">
+</div>

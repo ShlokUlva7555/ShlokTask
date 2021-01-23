@@ -1,0 +1,97 @@
+.blob-img {
+  position: absolute;
+  right: -200px;
+  top: -340px;
+  transform: scale(0.8);
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  @media only screen and (max-width: 1023px) {
+    display: none;
+  }
+}
+
+.main-col {
+  position: relative;
+  overflow: hidden;
+}
+
+.blob-img-left {
+  position: absolute;
+  top: 100px;
+  left: -150px;
+  transform: scale(0.7);
+  -webkit-transform: scale(0.7);
+  -moz-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  -o-transform: scale(0.7);
+}
+
+.black {
+  background: #222222;
+  width: 236px;
+  margin: 5px 60px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @media only screen and (max-width: 767px) {
+    flex-flow: column;
+
+    #calc {
+      padding-bottom: 50px;
+    }
+  }
+  @media only screen and (min-width: 767px) and (max-width: 1023px) {
+    flex-flow: column;
+    #calc {
+      padding-bottom: 50px;
+    }
+  }
+}
+
+.small-container {
+  width: fit-content;
+  padding: 150px 90px;
+  h1 {
+    width: 70%;
+    margin: 5px 60px;
+  }
+  @media only screen and (max-width: 767px) {
+    flex-flow: column;
+    padding: 100px 0px;
+  }
+
+  @media only screen and (min-width: 767px) and (max-width: 1023px) {
+    flex-flow: column;
+    padding: 100px 20px;
+  }
+
+  @media only screen and (min-width: 1023px) and (max-width: 1400px) {
+    padding: 100px 20px;
+  }
+}
+
+.image-container {
+  position: relative;
+
+  #video {
+    width: 100%;
+    margin-top: 80px;
+  }
+
+  #dots {
+    position: absolute;
+    bottom: -28px;
+    right: -100px;
+    z-index: -999;
+  }
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+}

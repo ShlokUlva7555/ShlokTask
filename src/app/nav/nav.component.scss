@@ -1,0 +1,85 @@
+.sticky {
+  background-color: #fff;
+  box-shadow: 0px 2px 10px -1px #beb7b749;
+  .open-logo {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+header {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  transition: all 0.2 linear;
+  -webkit-transition: all 0.2 linear;
+  -moz-transition: all 0.2 linear;
+  -ms-transition: all 0.2 linear;
+  -o-transition: all 0.2 linear;
+  .open-logo {
+    width: 80px;
+    height: 80px;
+    margin-left: 100px;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+
+    @media only screen and (max-width: 1023px) {
+      margin-left: 20px;
+    }
+  }
+}
+
+.nav-items {
+  display: inline-block;
+  list-style: none;
+  @media only screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.nav-items li {
+  display: inline-block;
+  margin: 0 25px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  a {
+    text-decoration: none;
+    color: var(--font-regular-color);
+  }
+}
+
+.nav-items li > a:hover {
+  color: var(--purple);
+}
+
+.flexbox-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.flexbox-item-logo {
+  flex-grow: 1;
+}
+
+.flexbox-items-buttons {
+  margin: 0 50px;
+  @media only screen and (max-width: 1023px) {
+    margin: 0 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  &:last-child {
+    @media only screen and (min-width: 767px) and (max-width: 1023px) {
+      margin-right: 20px;
+    }
+  }
+}
